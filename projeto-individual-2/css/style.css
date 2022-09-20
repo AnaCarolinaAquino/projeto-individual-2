@@ -1,0 +1,211 @@
+/*Utilizou-se o @import para importar uma fonte do site google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+/*No "body" são definidas as propriedades do corpo da página.*/
+body {
+  /*Os estilos dos elementos HTML estão estruturados dentro de uma caixa chamada de "The Box Model". Nessa caixa existe a hierarquia:
+
+    Margin Box 
+    Border Box
+    Padding Box
+    Element Box ( O elemento em si, div, span, entre outros)
+    _________________________________________________________
+    A propriedade margin define o espaçamento fora do conteúdo.
+    margin: top,right,bottom,left (pode-se especificar valores para cada direção do conteúdo)
+    margin: 0; (significa que a margem de todos os lados é = 0) */
+  margin: 0;
+  /*A propriedade padding define o espaçamento dentro dos limites do conteúdo. Assim, padding: 0; (significa que o preenchimento de todos os lados é = 0)*/
+  padding: 0;
+  /*A propriedade height define a altura do elemento. No caso, 100 pixels.*/
+  height: 100vh;
+  /*font-family é a propriedade que especifica a fonte para um elemento. No caso, importamos uma fonte do google fonts chamada "Rajdhani" que é do tipo sans-serif. É uma boa prática definir tanto a familia quanto o tipo, pois caso o navegador não possua a fonte disponível ele irá buscar outra fonte dentro da tipologia sans-serif.*/
+  font-family: 'Rajdhani', sans-serif;
+}
+
+h1 {
+  display: none;
+}
+
+.container-menu {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 1000vh;
+  height: 10%;
+  border: 1px solid rgba(154, 151, 154, 0.441);
+  background-color: white;
+  z-index: 1000;
+}
+
+.menu {
+  position: fixed;
+  top: 0%;
+  left: 35%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 100vw;
+}
+
+ul a {
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  font-size: 140%;
+  color: #f54f6d;
+  text-shadow: rgb(24, 18, 23) 0.1em 0.1em 0.2em;
+  display: flex;
+  align-items: center;
+  text-size-adjust: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+a:hover {
+  color: #fdf145;
+}
+
+li {
+  margin-right: 5%;
+}
+
+img {
+  position: static;
+  top: 0%;
+  width: 5%;
+  height: 5%;
+}
+
+.zoom {
+  overflow: hidden;
+}
+
+.zoom img {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.zoom:hover img {
+  width: 5%;
+  height: 5%;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.conteudo {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  top: 2%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+p {
+  margin: 1%;
+  display: flex;
+  font-size: 130%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px dotted #f54f6d;
+  border-radius: 10px;
+  position: static;
+  padding: 3%;
+}
+
+footer {
+  position: fixed;
+  top: 92%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+  border: 1px solid rgba(154, 151, 154, 0.441);
+  background-color: #f54f6d;
+  display: flex;
+  align-items: center;
+  text-size-adjust: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/*responsividade*/
+/*Tela com largura máxima de 800px o conteudo se ajusta em colunas.*/
+@media (max-width: 800px) {
+  img {
+    position: relative;
+    width: 2%;
+    height: 2%;
+    padding-top: 1%;
+    display: flex;
+  }
+
+  .zoom {
+    overflow: hidden;
+  }
+
+  .zoom:hover img {
+    display: none;
+  }
+
+  .conteudo {
+    width: 80%;
+    height: 30%;
+    position: relative;
+    top: 30%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0%;
+    left: 10%;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    position: relative;
+    top: 10%;
+    margin: 1%;
+    display: flex;
+    font-size: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px dotted #f54f6d;
+    border-radius: 10px;
+    padding: 3%;
+  }
+}

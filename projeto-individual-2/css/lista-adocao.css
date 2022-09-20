@@ -1,0 +1,185 @@
+/*Utilizou-se o @import para importar uma fonte do site google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+/*No "body" são definidas as propriedades do corpo da página.*/
+body {
+  /*Os estilos dos elementos HTML estão estruturados dentro de uma caixa chamada de "The Box Model". Nessa caixa existe a hierarquia:
+
+    Margin Box 
+    Border Box
+    Padding Box
+    Element Box ( O elemento em si, div, span, entre outros)
+    _________________________________________________________
+    A propriedade margin define o espaçamento fora do conteúdo.
+    margin: top,right,bottom,left (pode-se especificar valores para cada direção do conteúdo)
+    margin: 0; (significa que a margem de todos os lados é = 0) */
+  margin: 0;
+  /*A propriedade padding define o espaçamento dentro dos limites do conteúdo. Assim, padding: 0; (significa que o preenchimento de todos os lados é = 0)*/
+  padding: 0;
+  /*A propriedade height define a altura do elemento. No caso, 100 pixels.*/
+  height: 100vh;
+  /*font-family é a propriedade que especifica a fonte para um elemento. No caso, importamos uma fonte do google fonts chamada "Rajdhani" que é do tipo sans-serif. É uma boa prática definir tanto a familia quanto o tipo, pois caso o navegador não possua a fonte disponível ele irá buscar outra fonte dentro da tipologia sans-serif.*/
+  font-family: 'Rajdhani', sans-serif;
+  overflow: auto;
+}
+
+h1 {
+  display: none;
+}
+
+.container-menu {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 1000vh;
+  height: 10%;
+  border: 1px solid rgba(154, 151, 154, 0.441);
+  background-color: white;
+  z-index: 1000;
+}
+
+.menu {
+  position: fixed;
+  top: 0%;
+  left: 35%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 100vw;
+}
+
+ul a {
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  font-size: 140%;
+  color: #f54f6d;
+  text-shadow: rgb(24, 18, 23) 0.1em 0.1em 0.2em;
+  line-height: 50%;
+  display: flex;
+  align-items: center;
+  text-size-adjust: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+a:hover {
+  color: #fdf145;
+}
+
+li {
+  margin-right: 5%;
+}
+
+.container-adocao {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  display: flexbox;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.container-adocao div {
+  width: 60%;
+  position: relative;
+  top: 50%;
+  left: 17%;
+  bottom: 10%;
+  display: flex;
+  margin: 3%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container-adocao img {
+  width: 40%;
+  height: 40%;
+  margin: 2%;
+  display: flex;
+  float: left;
+}
+
+.box-pink {
+  border: 2px solid #f54f6d;
+  border-radius: 10px;
+}
+
+.box-pink p {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.box-yellow {
+  border: 2px solid #fdf145;
+  border-radius: 10px;
+}
+
+.box-yellow p {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+p {
+  font-size: 100%;
+  font-weight: 500;
+  margin: 1%;
+  padding: 1%;
+}
+
+.zoom:hover {
+  width: 50%;
+  height: 50%;
+  position: static;
+  transition: all 0.9s;
+}
+
+footer {
+  position: fixed;
+  top: 92%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+  border: 1px solid rgba(154, 151, 154, 0.441);
+  background-color: #f54f6d;
+  display: flex;
+  align-items: center;
+  text-size-adjust: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/*responsividade*/
+/*Tela com largura máxima de 800px o conteudo se ajusta em colunas.*/
+@media (max-width: 800px) {
+  .container-adocao div {
+    width: 60%;
+    position: relative;
+    left: 17%;
+    display: flex;
+    margin: 3%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .menu {
+    position: fixed;
+    top: 0%;
+    left: 10%;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
